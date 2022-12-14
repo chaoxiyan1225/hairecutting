@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-5-21 15:47:52 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="happylife.model.TbMchWechatRelation" table="tb_mch_wechat_relation" catalog="happylife">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+
+        <property name="fkOpenId" type="string">
+            <column name="fk_open_id" length="100">
+                <comment>用户openid</comment>
+            </column>
+        </property>
+        
+        <property name="wechatName" type="string">
+            <column name="wechat_name" length="100">
+                <comment>用户昵称</comment>
+            </column>
+        </property>
+
+        <property name="fkMchId" type="int">
+            <column name="fk_mch_id" not-null="true">
+                <comment>&#189;&#187;&#210;&#215;&#188;&#199;&#194;&#188;&#203;&#249;&#202;&#244;&#181;&#196;&#201;&#204;&#188;&#210;</comment>
+            </column>
+        </property>
+        <property name="followTime" type="timestamp">
+            <column name="follow_time" length="19">
+                <comment>&#189;&#187;&#210;&#215;&#178;&#250;&#201;&#250;&#181;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cancelTime" type="timestamp">
+            <column name="cancel_time" length="19" >
+                <comment>&#189;&#187;&#210;&#215;&#178;&#250;&#201;&#250;&#181;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="isDelete" type="int">
+            <column name="is_delete" not-null="true">
+                <comment>&#202;&#199;&#183;&#241;&#210;&#209;&#190;&#173;&#214;&#167;&#184;&#182; &#163;&#186; 0 &#206;&#180; &#179;&#201;&#185;&#166;&#214;&#167;&#184;&#182; 1
+                &#163;&#172;&#210;&#209;&#190;&#173;&#179;&#201;&#185;&#166;</comment>
+            </column>
+        </property>
+        <property name="extProps" type="string">
+            <column name="ext_props" length="500">
+                <comment>扩展字段</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>
